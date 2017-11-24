@@ -1,0 +1,4 @@
+
+nov 18, 2017 01:20:38.06 NEW SESSION
+nov 18, 2017 01:20:38.06 1510975236868	addons.manager	WARN	Exception calling callback
+nov 18, 2017 01:24:35.53 1510975474766	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property

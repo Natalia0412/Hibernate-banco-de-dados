@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>FUNCIONÁRIOS</title>
+</h:head>
+<h:body>
+	<style>
+.coluna1 {
+	text-align: right !important;
+}
+
+.coluna2 {
+	text-align: left !important;
+}
+</style>
+
+	<p:growl id="msgs" showDetail="false" life="7000" sticky="false" />
+
+	<h:form id="form">
+
+		<h:panelGrid columns="2" columnClasses="coluna1, coluna2"
+			cellpadding="2" cellspacing="2" width="100%">
+
+			<h:outputText value="Nome:" />
+			<p:inputText maxlength="20" style="width:100px;" label="Nome"
+				required="true" value="#{funcionarioMB.edit.nome}" />
+
+			<h:outputText value="Fone:" />
+			<p:inputMask mask="(99) 9999-9999" maxlength="20"
+				style="width:100px;" label="Fone" required="true"
+				value="#{funcionarioMB.edit.fone}" />
+
+			<h:outputText value="Tipo:" />
+			<p:selectOneMenu label="Tipo" required="true"
+				value="#{funcionarioMB.edit.tipo}">
+				<f:selectItem itemLabel="Selecione" />
+				<f:selectItem itemLabel="Comum" itemValue="COMUM" />
+				<f:selectItem itemLabel="Gerente" itemValue="GERENTE" />
+				<f:selectItem itemLabel="Supervisor" itemValue="SUPERVISOR" />
+			</p:selectOneMenu>
+
+			<p:commandButton value="Salvar" update=":msgs form"
+				actionListener="#{funcionarioMB.doSave}" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,15 @@
+package br.com.etechoracio.jpa.view;
+
+@ManagedBean
+public class FuncionarioMB {
+	private Funcionario edit = new funcionaio();
+
+	public Funcionario getEdit() {
+		return edit;
+	}
+
+	public void setEdit(Funcionario edit) {
+		this.edit = edit;
+	}
+
+}

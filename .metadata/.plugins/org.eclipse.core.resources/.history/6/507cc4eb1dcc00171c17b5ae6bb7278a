@@ -1,0 +1,5 @@
+package br.com.etechoracio.jpa.view;
+
+public class FuncionarioMB {
+
+}

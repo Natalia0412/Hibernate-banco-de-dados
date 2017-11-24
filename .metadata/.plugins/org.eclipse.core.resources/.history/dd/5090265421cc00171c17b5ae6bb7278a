@@ -1,0 +1,8 @@
+package br.com.etechoracio.jpa.enums;
+
+public enum TipoFuncionarioEnum {
+	 comum,
+	 gerente,
+	supervisor
+
+}
